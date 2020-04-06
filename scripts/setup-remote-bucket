@@ -1,0 +1,8 @@
+#!/bin/bash
+export BUCKET_ID=productx-bucket
+gsutil versioning set on gs://${BUCKET_ID}
+
+#Enabling versioning for gs://gke-from-scratch-terraform-state
+gsutil versioning get gs://${BUCKET_ID}
+echo should show: gs://${BUCKET_ID}-terraform-state: Enabled
+
